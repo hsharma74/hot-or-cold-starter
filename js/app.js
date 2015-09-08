@@ -128,26 +128,35 @@ $(document).ready(function(){
 
 		if (diff >= 50) {
 			setFeedback("Ice Cold");
+			setColor("#00bfff");
 			return false;
 		} else if (diff < 50 && diff >= 30) {
 			setFeedback("Cold");
+			setColor("#0000ff");
 			return false;
 		} else if (diff < 30 && diff >= 20) {
 			setFeedback("Warm");
+			setColor("#ffa500");
 			return false;
 		} else if (diff < 20 && diff >= 10) {
 			setFeedback("Hot");
+			setColor("#ff4500");
 			return false;
 		} else if (diff < 10 && diff >= 1) {
 			setFeedback("Very Hot");
+			setColor("#cc324b");
 			return false;
 		} else {
 			setFeedback("Just Right");
+			setColor("#9acd32");
 			return true;
 		}
 
 	}
 
+  function setColor(colorName) {
+  	$("#feedback").css("background-color", colorName);
+  }
 
 
   // generate the number to be guessed by the user
