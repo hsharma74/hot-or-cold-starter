@@ -95,6 +95,7 @@ $(document).ready(function(){
 
 		$('ul#guessList li').remove();
 		setFeedback("Make your guess!");
+	  setColor("#cc324a");
 		clearUserGuess();
 		setGuessCount(0);
 	}
